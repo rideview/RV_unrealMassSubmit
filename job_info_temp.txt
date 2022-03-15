@@ -1,0 +1,4 @@
+Name=LS_CameraMotion
+Plugin=UnrealEngine
+Frames=1-10
+ChunkSize=100
