@@ -18,7 +18,7 @@ CHUNK_SIZE = '100'
 SEQUENCE_DIR_SYS =  'X:/UNREAL_ARCHIVE/FARM_TEST/Farm_2/Content/PhotoStudio/Sequences'
 
 DEADLINE_PATH = "C:/Progra~1/Thinkbox/Deadline10/bin/deadlinecommand.exe"
-SCRIPT_PATH = "X:\\PIPELINE\\PYTHON\\DEADLINE\\"
+SCRIPT_PATH = "X:\\PIPELINE\\PYTHON\\RV_unrealMassSubmit\\"
 
 obj = os.scandir(SEQUENCE_DIR_SYS)
 
