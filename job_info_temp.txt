@@ -1,4 +1,4 @@
-Name=LS_CameraMotion
+Name=Class01_Type04_Wheel08_Wing03_Color01
 Plugin=UnrealEngine
 Frames=1-10
 ChunkSize=100

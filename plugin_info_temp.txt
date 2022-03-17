@@ -1,8 +1,8 @@
-OutputDir=x:\UNREAL_ARCHIVE\FARM_TEST\RENDER\LS_CameraMotion\
-MovieName=LS_CameraMotion
-ProjectFile=X:\UNREAL_ARCHIVE\FARM_TEST\Farm_2\Farm_2.uproject
-Map=/Game/PhotoStudio/Levels/Cinematic/Cinematic.Cinematic
-LevelSequence=/Game/PhotoStudio/Sequences/LS_CameraMotion.LS_CameraMotion
+OutputDir=X:\2022_02_RV_NFT\04_renders\TEMP\Class01_Type04_Wheel08_Wing03_Color01\
+MovieName=Class01_Type04_Wheel08_Wing03_Color01
+ProjectFile=X:\2022_02_RV_NFT\03_production\01_cg\07_unreal\prototype_1\prototype_1.uproject
+Map=/Game/Maps/Main.Main
+LevelSequence=/Game/Sequences/variants/Class01_Type04_Wheel08_Wing03_Color01.Class01_Type04_Wheel08_Wing03_Color01
 Version=4
 OutputFormat=jpg
 OutputQuality=75

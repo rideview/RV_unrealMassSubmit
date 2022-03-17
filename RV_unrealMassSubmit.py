@@ -6,21 +6,33 @@
 import os
 
 
-PROJECT_FILE = 'X:\\UNREAL_ARCHIVE\\FARM_TEST\\Farm_2\\Farm_2.uproject'
-SEQUENCE_DIR = '/Game/PhotoStudio/Sequences/'
-MAP = '/Game/PhotoStudio/Levels/Cinematic/Cinematic.Cinematic'
-OUTPUT_DIR = 'x:\\UNREAL_ARCHIVE\\FARM_TEST\\RENDER\\'
+PROJECT_FILE = 'X:\\2022_02_RV_NFT\\03_production\\01_cg\\07_unreal\\prototype_1\\prototype_1.uproject'
+SEQUENCE_DIR = '/Game/Sequences/variants/'
+MAP = '/Game/Maps/Main.Main'
+OUTPUT_DIR = 'X:\\2022_02_RV_NFT\\04_renders\\TEMP\\'
 FRAME_RANGE = '1-10'
 CHUNK_SIZE = '100'
 
 ''' can be optimized to split from same path as sequence dir but this is fine for now'''
 
-SEQUENCE_DIR_SYS =  'X:/UNREAL_ARCHIVE/FARM_TEST/Farm_2/Content/PhotoStudio/Sequences'
+SEQUENCE_DIR_SYS =  'X:\\2022_02_RV_NFT\\03_production\\01_cg\\07_unreal\\prototype_1\\Content\\Sequences\\variants'
 
 DEADLINE_PATH = "C:/Progra~1/Thinkbox/Deadline10/bin/deadlinecommand.exe"
 SCRIPT_PATH = "X:\\PIPELINE\\PYTHON\\RV_unrealMassSubmit\\"
 
-obj = os.scandir(SEQUENCE_DIR_SYS)
+
+''''note: this does find subdirectories but sequence dir would need to be parsed as sub folders as well, saving that for later'''
+
+def scantree(path):
+    """Recursively yield DirEntry objects for given directory."""
+    for entry in os.scandir(path):
+        if entry.is_dir(follow_symlinks=False):
+            yield from scantree(entry.path)  # see below for Python 2.x
+        else:
+            yield entry
+
+#obj = os.scandir(SEQUENCE_DIR_SYS)
+obj = scantree(SEQUENCE_DIR_SYS)
 
 # List all files and directories in the specified path
 for entry in obj:
@@ -29,7 +41,7 @@ for entry in obj:
         print(x)
 
         SEQUENCE_NAME = x
-        JOB_NAME = SEQUENCE_NAME
+        JOB_NAME = 'RVUR_' + SEQUENCE_NAME
         RENDER_PATH =  OUTPUT_DIR + SEQUENCE_NAME + '\\'
         SEQUENCE_PATH = SEQUENCE_DIR + SEQUENCE_NAME + '.' + SEQUENCE_NAME
 
