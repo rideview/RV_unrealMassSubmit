@@ -10,7 +10,7 @@ PROJECT_FILE = 'X:\\2022_02_RV_NFT\\03_production\\01_cg\\07_unreal\\prototype_1
 SEQUENCE_DIR = '/Game/Sequences/variants/'
 MAP = '/Game/Maps/Main.Main'
 OUTPUT_DIR = 'X:\\2022_02_RV_NFT\\04_renders\\TEMP\\'
-FRAME_RANGE = '1-10'
+FRAME_RANGE = '1-55'
 CHUNK_SIZE = '100'
 
 ''' can be optimized to split from same path as sequence dir but this is fine for now'''
@@ -46,7 +46,7 @@ for entry in obj:
         SEQUENCE_PATH = SEQUENCE_DIR + SEQUENCE_NAME + '.' + SEQUENCE_NAME
 
         JobInfo = {
-            'Name': SEQUENCE_NAME,
+            'Name': JOB_NAME,
             'Plugin': 'UnrealEngine',
             'Frames': FRAME_RANGE,
             'ChunkSize': CHUNK_SIZE
@@ -54,7 +54,7 @@ for entry in obj:
 
         PluginInfo = {
             'OutputDir': RENDER_PATH,
-            'MovieName': JOB_NAME,
+            'MovieName': SEQUENCE_NAME,
             'ProjectFile': PROJECT_FILE,
             'Map': MAP,
             'LevelSequence': SEQUENCE_PATH,
@@ -67,7 +67,7 @@ for entry in obj:
             'FrameRate': '30',
             'DisableTextureStreaming': 'True',
             'CinematicMode': 'True',
-            'WarmupFrames': '0',
+            'WarmupFrames': '5',
             'CaptureHDR': 'True',
             'HideMessages': 'False',
             'VSyncEnabled': 'True'

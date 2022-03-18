@@ -1,4 +1,4 @@
-Name=Class01_Type04_Wheel08_Wing03_Color01
+Name=RVUR_Class04_Type02_Wheel05_Wing05_Color01
 Plugin=UnrealEngine
-Frames=1-10
+Frames=1-55
 ChunkSize=100
